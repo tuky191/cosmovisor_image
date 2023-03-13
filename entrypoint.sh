@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-find /entrypoint -maxdepth 1 -type f -exec {} \; | tee -a /var/log/entrypoint.log
+chmod +x /entrypoint/*.sh
+find /entrypoint/*.sh -maxdepth 1 -type f -exec {} \; | tee -a /var/log/cosmovisor/entrypoint.log
